@@ -1,3 +1,4 @@
+echo "Provisioning subscriber"
 curl -X POST 10.108.47.138:5000/api/subscriber/imsi-001010000000106 \
 -H "Content-Type: application/json" -d \
 "{ \
@@ -7,4 +8,4 @@ curl -X POST 10.108.47.138:5000/api/subscriber/imsi-001010000000106 \
 \"key\":\"00112233445566778899AABBCCDDEEFF\", \
 \"sequenceNumber\":\"16f3b3f70fc2\" \
 }"
-
+echo "--"
