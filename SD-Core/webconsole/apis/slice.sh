@@ -1,4 +1,5 @@
-curl -X POST 10.108.47.138:5000/config/v1/network-slice/default-slice \
+echo "Creating slice and placing group in it over " $1
+curl -X POST $1:5000/config/v1/network-slice/default-slice \
 -H "Content-Type: application/json" -d \
 "{ \
     \"slice-id\": \
@@ -38,3 +39,4 @@ curl -X POST 10.108.47.138:5000/config/v1/network-slice/default-slice \
         } \
     } \
 }"
+echo "--"
