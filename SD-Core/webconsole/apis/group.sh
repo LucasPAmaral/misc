@@ -1,4 +1,5 @@
-curl -X POST 10.108.47.138:5000/config/v1/device-group/default-group \
+echo "Creating group and placing subscriber in it over " $1
+curl -X POST $1:5000/config/v1/device-group/default-group \
 -H "Content-Type: application/json" -d \
 "{ \
       \"imsis\": \
@@ -30,3 +31,4 @@ curl -X POST 10.108.47.138:5000/config/v1/device-group/default-group \
           } \
       } \
   }"
+echo "--"
